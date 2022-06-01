@@ -113,7 +113,7 @@ def user_input_feature():
     # REG = st.sidebar.text_input('Provinsi', 'Jawa Barat').upper()
     THN = int(st.sidebar.number_input('Tahun', 2023, 3000))
 
-    st.header(f'UMR Regional di {REG.capitalize()} Tahun 1997 - {THN - 1}')
+    st.header(f'UMR Regional {REG.capitalize()} Tahun 1997 - {THN - 1}')
 
     df_dep = df[df.REGION.str.contains(REG)].reset_index()
     reg_cat = df_dep._get_value(0, "REGION_Cat")
@@ -163,7 +163,7 @@ def user_input_feature():
     cat = df_depresi.loc[df_depresi['provinsi'] == REG, 'kategori'].item()
     num = str(df_depresi.loc[df_depresi['provinsi'] == REG, 'urutan'].item())
     val = str(df_depresi.loc[df_depresi['provinsi'] == REG, 'value'].item())
-    st.write("Tingkat depresi di provinsi " + '**' + REG + '**' + " masuk ke dalam kategori " + cat + ", dengan urutan ke-" + num + ", dan angka prevalensi " + val)
+    st.write("Tingkat depresi di " + '**' + REG + '**' + " masuk ke dalam kategori " + cat + ", dengan urutan ke-" + num + ", dan angka prevalensi " + val)
     fig = px.histogram(df_depresi, x='provinsi', y="value",
     labels={
         "provinsi": "Provinsi",
