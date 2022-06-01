@@ -34,8 +34,6 @@ y = df['SALARY']
 # Load Dataset Depresi
 df_depresi = pd.read_csv('depresi.csv')
 
-df = df[df["REGION"].str.contains("INDONESIA") == False]
-
 # Animasi Data
 st.header('Pergerakan UMR (Regional) 1997 - 2022')
 fig = px.bar(
