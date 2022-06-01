@@ -159,7 +159,7 @@ def user_input_feature():
     #### Prediksi UMR : {}""".format(formatrupiah(int(prediksi))))
     st.write('---')
     
-    st.header(f'Tingkat Depresi di Provinsi {REG.capitalize()}')
+    st.header(f'Tingkat Depresi di {REG.capitalize()}')
     cat = df_depresi.loc[df_depresi['provinsi'] == REG, 'kategori'].item()
     num = str(df_depresi.loc[df_depresi['provinsi'] == REG, 'urutan'].item())
     val = str(df_depresi.loc[df_depresi['provinsi'] == REG, 'value'].item())
