@@ -23,7 +23,7 @@ st.write("""
 Aplikasi ini untuk **Final Project Orbit Future Academy AI Mastery**!""")
 
 st.write("""
-**Anggota** : Zaki Bahar (Presevere), Fadlan Akmal (Kangae), Haydar Rizaldy (kangae), Raihan Romzi (Kaizen).""")
+**Anggota** : Zaki Bahar (Persevere), Fadlan Akmal (Kangae), Haydar Rizaldy (Kangae), Raihan Romzi (Kaizen).""")
 st.write('---')
 
 # Load Dataset UMR
