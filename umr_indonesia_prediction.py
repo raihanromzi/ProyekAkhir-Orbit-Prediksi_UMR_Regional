@@ -20,7 +20,7 @@ from sklearn.metrics import mean_squared_error
 
 st.write("""
 # UMR Indonesia Prediction
-Aplikasi ini untuk **Tugas Akhir Orbit Future Academy AI Masterry**!""")
+Aplikasi ini untuk **Tugas Akhir Orbit Future Academy AI Mastery**!""")
 
 st.write("""
 **Anggota** : Zaki Bahar, Fadlan Akmal, Haydar Rizaldy, Raihan Romzi.""")
