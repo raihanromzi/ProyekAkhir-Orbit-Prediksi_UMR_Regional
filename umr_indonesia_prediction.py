@@ -27,7 +27,7 @@ st.write("""
 st.write('---')
 
 # Load Dataset UMR
-df = pd.read_csv('umr_fix.csv').drop(['Unnamed: 0'], axis=1)
+df = pd.read_csv('umr_fix.csv')
 X = df.drop(['SALARY','REGION'], axis = 1)
 y = df['SALARY']
 
