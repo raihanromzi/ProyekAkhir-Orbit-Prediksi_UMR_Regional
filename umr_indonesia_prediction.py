@@ -20,10 +20,10 @@ from sklearn.metrics import mean_squared_error
 
 st.write("""
 # UMR Indonesia Prediction
-Aplikasi ini untuk **Tugas Akhir Orbit Future Academy AI Mastery**!""")
+Aplikasi ini untuk **Final Project Orbit Future Academy AI Mastery**!""")
 
 st.write("""
-**Anggota** : Zaki Bahar, Fadlan Akmal, Haydar Rizaldy, Raihan Romzi.""")
+**Anggota** : Zaki Bahar (Presevere), Fadlan Akmal (Kangae), Haydar Rizaldy (kangae), Raihan Romzi (Kaizen).""")
 st.write('---')
 
 # Load Dataset UMR
@@ -35,7 +35,7 @@ y = df['SALARY']
 df_depresi = pd.read_csv('depresi.csv')
 
 # Animasi Data
-st.header('Pergerakan UMR (Regional) 1997 - 2022')
+st.header('Pergerakan UMR Tahun 1997 - 2022')
 fig = px.bar(
     df,
     x='REGION',
@@ -113,7 +113,7 @@ def user_input_feature():
     # REG = st.sidebar.text_input('Provinsi', 'Jawa Barat').upper()
     THN = int(st.sidebar.number_input('Tahun', 2023, 3000))
 
-    st.header(f'UMR Regional {REG.capitalize()} Tahun 1997 - {THN - 1}')
+    st.header(f'UMR {REG.capitalize()} Tahun 1997 - {THN - 1}')
 
     df_dep = df[df.REGION.str.contains(REG)].reset_index()
     reg_cat = df_dep._get_value(0, "REGION_Cat")
@@ -166,7 +166,7 @@ def user_input_feature():
     st.write("Tingkat depresi di " + '**' + REG + '**' + " masuk ke dalam kategori " + cat + ", dengan urutan ke-" + num + ", dan angka prevalensi " + val)
     fig = px.histogram(df_depresi, x='provinsi', y="value",
     labels={
-        "provinsi": "Provinsi",
+        "provinsi": "Regional",
         "value": "Prevalensi",
         })
     fig.update_xaxes(type='category')
