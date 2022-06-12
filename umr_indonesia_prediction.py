@@ -113,7 +113,7 @@ def user_input_feature():
     # REG = st.sidebar.text_input('Provinsi', 'Jawa Barat').upper()
     THN = int(st.sidebar.number_input('Tahun', 2023, 3000))
 
-    st.header(f'UMR {REG.capitalize()} Tahun 1997 - {THN}')
+    st.header(f'UMR {REG.capitalize()} Tahun 1997 - 2022')
 
     df_dep = df[df.REGION.str.contains(REG)].reset_index()
     reg_cat = df_dep._get_value(0, "REGION_Cat")
